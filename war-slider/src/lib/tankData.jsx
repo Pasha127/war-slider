@@ -1,7 +1,7 @@
 const tankData = {
     germany: {
         number: 129,
-        tanks: ["StuG III",   "Panther",  "Maus",   "Tiger",   "Pz. III"]
+        tanks: ["VK 36.01",   "Tiger I",  "Maus",   "E 100",   "Löwe"]
     },
     ussr:{
         number: 142,

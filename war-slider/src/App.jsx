@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import RegisterBtn from './components/buttons/RegisterBtn'
 
 
 
@@ -8,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      
+      <RegisterBtn/>
     </div>
   )
 }
