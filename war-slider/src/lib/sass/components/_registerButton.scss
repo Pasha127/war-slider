@@ -1,3 +1,6 @@
+@use "../abstracts" as *;
+
+
 .registration-button{
     width: 301px;
     height: 61px;
@@ -6,9 +9,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: $primary-text;
+    
 
     &:hover{
         background-image: url("../../assets/SVGs/buttons/button-cornercut-orange-hover.svg");
         cursor: pointer;
+    }
+    &:active{
+        background-image: url("../../assets/SVGs/buttons/button-cornercut-orange.svg");
     }
 }

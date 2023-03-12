@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './App.css'
+import './lib/sass/App.scss'
 import RegisterBtn from './components/buttons/RegisterBtn'
 
 

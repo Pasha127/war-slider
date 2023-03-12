@@ -11,10 +11,10 @@ const subTagLine = "Each model has been recreated with surgical precision";     
 const CountrySelector = () => {
     return ( 
         <div className="country-selector">
-            <div className="tank-type-header"></div>
+            <div className="tank-type-header">{placeholderTankCategory}</div>
             <div className="call-to-action-container">
-                <div className="tag-line"></div>
-                <div className="sub-tag-line"></div>
+                <div className="tag-line">{tagLine}</div>
+                <div className="sub-tag-line">{subTagLine}</div>
                 <RegisterBtn/>
             </div>
 
