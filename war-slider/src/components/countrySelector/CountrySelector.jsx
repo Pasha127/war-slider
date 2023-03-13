@@ -2,7 +2,7 @@ import React from "react";
 import tankData from "../../lib/tankData";
 import RegisterBtn from "../buttons/RegisterBtn";
 import largeGermanFlag from "../../assets/SVGs/flags/germany_large_faded.svg"
-import FlagSlider from "./slider";
+import FlagSlider from "./FlagSlider";
 
 const placeholderTankCategory = "HEAVY TANKS";                                  //Placeholder text for the tank category - will be replaced by the tank category selected by the user
 const tagLine = "Over 600 vehicles from the largest tank-building superpowers"; //Tagline for the slider page
@@ -26,7 +26,7 @@ const CountrySelector = () => {
                 <RegisterBtn/>
             </div>
             <div className="slider-container">
-                <FlagSlider/>
+                <FlagSlider tankCategory={"heavy"}/>
             </div>
         </div>
         )        

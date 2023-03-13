@@ -4,6 +4,7 @@
     text-align: center;
     color: $primary-text;
     font-weight: 500;
+    background-color: $background-color;
     
     .large-flag-container{
         overflow: hidden;
@@ -56,6 +57,7 @@
         position: absolute;
         width: 100%;
         bottom: 0px;
+        height: 49vh;
     }
 
 }

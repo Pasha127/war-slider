@@ -63,6 +63,12 @@ clip-path: $clip-path;
     background: rgb(242,83,34);
     background: linear-gradient(90deg, rgba(242,83,34,.81) 0%, rgba(242,83,34,.81) 50%, rgba(242,83,34,.81) 100%);
 }
+&:focus{
+    color: $primary-text;
+    background: rgb(242,83,34);
+    background: linear-gradient(0deg, #D23E11cf 20%, #9B2F0Ecf 50%, #CC390Bcf 80%);
+  
+    }
 
 p{
     text-shadow: 0px 1px 2px black;
