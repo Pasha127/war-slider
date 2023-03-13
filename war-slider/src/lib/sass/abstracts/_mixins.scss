@@ -1,0 +1,70 @@
+@use "variables" as *;
+
+@mixin center-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin orange-button($w: 291px, $h: 51px, $z: 0){
+    $angle: 63%;
+    //polygon(100% 0, 100% 63%, 95% 100%, 0 100%, 0 0
+    $clip-path: polygon(
+    100% 0,
+    100% calc(65%* 1),
+    calc(94% * 1) 100%,
+    0 100%,
+    0 0);
+    width: $w;
+    height: $h;
+/*     background-image: url("../../assets/SVGs/buttons/button-cornercut-orange.svg"); */
+clip-path: $clip-path;
+    background: rgb(242,83,34);
+    background: linear-gradient(90deg, rgba(242,83,34,.81) 0%, rgba(242,83,34,.81) 50%, rgba(242,83,34,.81) 100%);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary-text;
+    margin: 0;
+    
+    &::before{
+        position: absolute;
+        width: 250px;
+        height: 1px;
+        content: '';
+        background: rgb(255,255,255);
+        background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        margin-bottom: calc($h - 1px);
+        margin-right: calc($w - 10px);
+    }
+    &::after{
+        position: absolute;
+        width: 1px;
+        height: 51px;
+        content: '';
+        background: rgb(255,255,255);
+        background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        margin-bottom: 0px;
+        margin-right: calc($w - 1px);
+        z-index: $z;
+}
+
+&:hover{
+    cursor: pointer;
+    color: $primary-text;
+    background: rgb(242,83,34);
+    background: linear-gradient(0deg, #D23E11cf 20%, #9B2F0Ecf 50%, #CC390Bcf 80%);
+    
+}
+&:active{
+    color: $primary-text;
+    background: rgb(242,83,34);
+    background: linear-gradient(90deg, rgba(242,83,34,.81) 0%, rgba(242,83,34,.81) 50%, rgba(242,83,34,.81) 100%);
+}
+
+p{
+    text-shadow: 0px 1px 2px black;
+}
+}

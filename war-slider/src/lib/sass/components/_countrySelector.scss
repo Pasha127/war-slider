@@ -1,10 +1,61 @@
 @use "../abstracts" as *;
 .country-selector{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
+    @include center-flex;
+    text-align: center;
+    color: $primary-text;
+    font-weight: 500;
     
+    .large-flag-container{
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        @include center-flex;
+        top: 280px;
+
+        .large-flag{
+            width: 100vw;
+            position: relative;
+            object-fit: cover;
+
+        }
+
+    }
+
+    .tank-type-header{
+        font-size: 28pt;
+        line-height: 2.5rem;
+        width: 200px;
+        margin-block: 20px;
+        
+    }
+    
+    .call-to-action-container{
+        @include center-flex;
+        text-transform: uppercase;
+
+        .taglines{
+            @include center-flex;
+            margin-bottom: 20px;
+            
+            .tag-line{
+                font-size: 14pt;
+                width: 290px;
+                margin-bottom: 15px;
+            }
+            
+            .sub-tag-line{
+                font-size: 9pt;
+                width: 206px;
+                color: $secondary-text;
+            }
+        }
+    }
+
+    .slider-container{
+        @include center-flex;
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+    }
 
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './lib/sass/App.scss'
-import RegisterBtn from './components/buttons/RegisterBtn'
+import CountrySelector from './components/countrySelector/CountrySelector'
 
 
 
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <RegisterBtn/>
+      <CountrySelector/>
     </div>
   )
 }

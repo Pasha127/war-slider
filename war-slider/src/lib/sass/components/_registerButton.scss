@@ -2,21 +2,5 @@
 
 
 .registration-button{
-    width: 301px;
-    height: 61px;
-    background-image: url("../../assets/SVGs/buttons/button-cornercut-orange.svg");
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $primary-text;
-    
-
-    &:hover{
-        background-image: url("../../assets/SVGs/buttons/button-cornercut-orange-hover.svg");
-        cursor: pointer;
-    }
-    &:active{
-        background-image: url("../../assets/SVGs/buttons/button-cornercut-orange.svg");
-    }
+    @include orange-button(291px,51px,0);  //Mixin that takes x, y and z parameters for orange curnercut button
 }
