@@ -1,0 +1,47 @@
+{ "tankData":[
+    {   "name": "germany",
+        "number": 129,
+        "tanks": ["VK 36.01",   "Tiger I",  "Maus",   "E 100",   "Löwe"]
+    },
+    {   "name": "ussr",
+        "number": 142,
+        "tanks": ["KV-1", "KV-220-2",  "Object 244",   "IS-2",   "IS-6 B"]
+    }, 
+    {   "name": "usa",
+        "number": 111,
+        "tanks": ["T14",   "M-IV-Y",  "M-II-Y",   "T77",   "AE Phase I"]
+    },
+    {   "name": "china",
+        "number": 53,
+        "tanks": ["BZ-58",   "WZ-111",  "110",   "BZ-75",   "IS-2"]
+    },
+    {   "name": "france",
+        "number": 78,
+        "tanks": ["B1",   "ARL 44",  "AMX 65t",   "FCM 50 t",   "AMX 50 B"]
+    },
+    {   "name": "uk",
+        "number": 89,
+        "tanks": ["TOG II",   "T95",  "FV215b",   "Gonsalo",   "Caliban"]
+    },
+    {   "name": "japan",
+        "number": 26,
+        "tanks": ["Type 4 H",   "O-I ",  "type 5 H",   "O-Ni",   "O-Ho"]
+    },
+    {   "name": "czech",
+        "number": 20,
+        "tanks": ["Vz. 44-1",   "T 56",  "T 45",   "Vz. 55",   "TNH T Vz. 51"]
+    },
+    {   "name": "sweden",
+        "number": 32,
+        "tanks": ["Emil I",   "Strv K",  "Strv K",   "Kranvagn",   "Emil II"]
+    },
+    {   "name": "poland",
+        "number": 21,
+        "tanks": ["45TP ",   "50TP ",  "53TP ",   "50TP ",   "60TP "]
+    },
+    {   "name": "italy",
+        "number": 27,
+        "tanks": ["Rinoceronte",   "C50",  "C45",   "CC55",   "P.88"]
+    }
+] 
+}
