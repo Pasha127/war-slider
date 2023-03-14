@@ -7,27 +7,11 @@
     flex-direction: column;
     overflow: hidden;
     width: 100vw;
-
     
-
-    .flag-container{
-        overflow: hidden;
-        position: absolute;
-        top: -135px;
-        @include center-flex;
-
-        .flag{
-            width: 100vw;
-            position: relative;
-            object-fit: cover;
-            z-index: 0;
-        }
-    
-    }
 
     .country-title{
         position: absolute;
-        top: 0px;
+        top: -30px;
         font-size: 40pt;
         font-weight: 700;
         color: #00000000;
@@ -44,9 +28,38 @@
     }
     .tanks-container{
         @include center-flex;
+        position: absolute;
+        top: -120px;
+        left: 0;
+        width: 100vw;
+        height: 100%;
+        overflow: hidden;
         .tanks{
+            position: absolute;
+            top: 90px;
             width: 635px;
             z-index: 1;
+        }
+        
+        .background{
+            position: absolute;
+            top: 0;
+            height: 100%;
+        }
+
+        .flag-container{
+            overflow: hidden;
+            position: absolute;
+            top: -10px;
+            @include center-flex;
+    
+            .large-flag{
+                width: 100vw;
+                position: relative;
+                object-fit: cover;
+                z-index: 1;
+            }
+        
         }
 
     }
@@ -71,34 +84,6 @@
             }
 
         }
-        .stats{
-            @include center-flex;
-            height: 122px;
-            width: 100%;
-            position: absolute;
-            top: 140px;
-            
-            .number{
-                font-size: 53pt;
-                font-weight: 900;
-                color: $primary-text;
-                margin-bottom: 0px;
-
-            }
-            .number-subtitle{
-                color: $secondary-text;
-                text-transform: uppercase;
-                font-size: 9pt;
-                position: relative;
-                top: -20px;
-            }
-            .tanks-list{
-                text-transform: uppercase;
-                font-size: 12pt;
-                position: relative;
-                top: -15px;
-            }
-        }
         .slider-section{
             @include center-flex;
             width: 100vw;
@@ -107,6 +92,34 @@
             bottom: 0px;
             flex-direction: row;
             
+            .stats{
+                @include center-flex;
+                height: 122px;
+                width: 100%;
+                position: absolute;
+                top: -130px;
+                
+                .number{
+                    font-size: 53pt;
+                    font-weight: 900;
+                    color: $primary-text;
+                    margin-bottom: 0px;
+    
+                }
+                .number-subtitle{
+                    color: $secondary-text;
+                    text-transform: uppercase;
+                    font-size: 9pt;
+                    position: relative;
+                    top: -20px;
+                }
+                .tanks-list{
+                    text-transform: uppercase;
+                    font-size: 12pt;
+                    position: relative;
+                    top: -15px;
+                }
+            }
             .swiper{
                 height: 100%;
             }
@@ -127,7 +140,7 @@
             
                 .flag-img-active{
                     height:  100%;
-                    width: 100%;
+                    width: 91px;
                     margin-top: 15px;
                     transition: margin-top .3s;
                 }

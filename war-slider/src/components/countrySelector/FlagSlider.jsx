@@ -4,6 +4,7 @@ import tanksImg from "../../assets/SVGs/tanks/germany_heavy_tanks.svg";
 import {Swiper, SwiperSlide, useSwiper, useSwiperSlide} from "swiper/react";
 import 'swiper/css'
 
+const backgroundURL = "https://eu-wotp.wgcdn.co/static/5.117.1_a28195/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/bg-nation.jpg";
 const tankURL = "https://eu-wotp.wgcdn.co/static/5.117.1_a28195/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/overlap/";
 const largeFlagURL = "https://eu-wotp.wgcdn.co/static/5.117.1_a28195/wotp_static/img/core/frontend/scss/common/blocks/about-technic/img/flags/";
 const smallFlagURL = "https://eu-wotp.wgcdn.co/static/5.117.1_a28195/wotp_static/img/core/frontend/scss/common/blocks/img/flags/";
@@ -60,30 +61,30 @@ let sliderSettings = {
 
 
     return(<div className="flag-slider">
-        
-        <div className="flag-container">
-            <img src={largeFlagURL + selectedCountry +".webp"} alt="flag" className="flag"/>
-        </div>
         <div className="tanks-container">
+            <div className="flag-container">
+                <img src={largeFlagURL + selectedCountry +".webp"} alt="flag" className="large-flag"/>
+            </div>
             <img src={tankURL + selectedCountry +".webp"} alt="tanks" className="tanks" />
+            <img src={backgroundURL} className="background"></img>
         </div>
         <div className="country-title">
             <p>{selectedCountry}</p>
         </div>
         <div className="slider-bottom">
             <div className="bottom-gradient"></div>
-            <div className="stats">
-                <div className="number">
-                    {numberOfTanks}
-                </div>
-                <div className="number-subtitle">
-                    {`${countryAdjective} vehicles in the game`}
-                </div>
-                <div className="tanks-list">
-                    {listOfTanks}
-                </div>
-            </div>
             <div className="slider-section">
+                <div className="stats">
+                    <div className="number">
+                        {numberOfTanks}
+                    </div>
+                    <div className="number-subtitle">
+                        {`${countryAdjective} vehicles in the game`}
+                    </div>
+                    <div className="tanks-list">
+                        {listOfTanks}
+                    </div>
+                </div>
             <Swiper {...sliderSettings}
             onSlideChange={(swiper) => {
                 setSelectedCountry(tankData[swiper.realIndex]?.name);

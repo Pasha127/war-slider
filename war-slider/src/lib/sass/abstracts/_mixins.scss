@@ -34,8 +34,8 @@
         width: 250px;
         height: 1px;
         content: '';
-        background: rgb(255,255,255);
-        background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        background: #e9d033;
+        background: linear-gradient(135deg, #e9d033 0%, rgba(255,255,255,0) 100%);
         margin-bottom: calc($h - 1px);
         margin-right: calc($w - 10px);
     }
@@ -44,8 +44,8 @@
         width: 1px;
         height: 51px;
         content: '';
-        background: rgb(255,255,255);
-        background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+        background: #e9d033;
+        background: linear-gradient(135deg, #e9d033 0%, rgba(255,255,255,0) 100%);
         margin-bottom: 0px;
         margin-right: calc($w - 1px);
         z-index: $z;
