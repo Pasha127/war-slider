@@ -9,7 +9,8 @@
     width: 100vw;
     
 
-    .country-title{
+    @media(min-height: 630px){
+        .country-title{
         position: absolute;
         top: -30px;
         font-size: 40pt;
@@ -25,7 +26,7 @@
         p{
             margin: 0;
         }
-    }
+    }}
     @media(min-width: 400px) and  (min-height:700px){
         .country-title{
             top: -100px;
@@ -222,12 +223,21 @@
                     position: relative;
                     top: -20px;
                 }
+                @media(max-height: 565px){
+                    .number{opacity: 0}
+                    .number-subtitle{opacity: 0}
+                }
+
+                
                 .tanks-list{
                     text-transform: uppercase;
                     font-size: 12pt;
                     position: relative;
                     top: -15px;
                 }
+            }
+            @media(max-height: 475px){
+                .stats{opacity: 0}
             }
             .swiper{
                 height: 100%;
@@ -281,5 +291,7 @@
             }
         }
     }
-
+}
+@media(max-height: 423px){
+    .flag-slider{opacity: 0}
 }
