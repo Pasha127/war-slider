@@ -2,7 +2,7 @@
 
 
 .registration-button{
-    @include orange-button(291px,51px,1);  //Mixin that takes x, y and z parameters for orange curnercut button
+    @include orange-button(291px,51px,1,12pt);  //Mixin that takes x, y, z, and font parameters for orange curnercut button
 }
 @media (max-width: 319px){
     .registration-button{

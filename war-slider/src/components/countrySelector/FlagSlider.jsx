@@ -92,9 +92,11 @@ let sliderSettings = {
                 >
                 {tankData.length > 0 && tankData.map((country, index) => (
                     <SwiperSlide key={country.name+index} className="slider-flag" >
+                        <div  className={`flag-img${index === activeSlide ? '-active' : ''}`}>
+                        <div className="slider-highlight"></div>
                         {<img src={smallFlagURL + country.name +"_small.png"} 
                         alt="slider-flag" 
-                        className={`flag-img${index === activeSlide ? '-active' : ''}`}/>}
+                       />}</div>
                         <div className="flag-subtitle">{country.name}</div>
     
                     </SwiperSlide>

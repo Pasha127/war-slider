@@ -1,4 +1,5 @@
 @use "../abstracts" as *;
+
 .country-selector{
     @include center-flex;
     text-align: center;
@@ -38,7 +39,20 @@
         width: 200px;
         margin-block: 20px;
         z-index: 2;
-        
+    }
+    @media(min-width: 400px){
+        .tank-type-header{
+            font-size: 40pt;
+            line-height: 2.5rem;
+            width: 400px;
+            margin-block: 20px;
+            z-index: 2;
+        }
+    }
+    @media(min-height: 800px){
+        .tank-type-header{
+            margin-block: 5vh;
+        }
     }
     
     .call-to-action-container{
