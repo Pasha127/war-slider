@@ -45,22 +45,55 @@
     .tanks-container{
         @include center-flex;
         position: absolute;
-        top: -120px;
+        top: -150px;
         left: 0;
         width: 100vw;
         height: 100%;
         overflow: hidden;
         
         .background{
+            background-image: url($background-URL);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
             position: absolute;
-            top: 0;
-            height: 100%;
+            top: 50px;
+            width: 200%;
+            object-fit: contain;
+            @include center-flex;
+            .tanks{
+                position: static;
+                margin-top: 90px;
+                width: 90%;
+                z-index: 1;
+            }
         }
-        .tanks{
-            position: absolute;
-            top: 90px;
-            width: 635px;
-            z-index: 1;
+        @media(min-width:400px){
+            .tanks{
+                position: absolute;
+                top: 90px;
+                width: 100vw;
+            }
+            .background{
+                position: absolute;
+                top: 0;
+                height: 120%;
+                width: 100vw;
+            }
+            
+        }
+        @media(min-width: 640px){
+            .tanks{
+                position: absolute;
+                top: 90px;
+                width: 100vw;
+            }
+            .background{
+                position: absolute;
+                top: 0;
+                height: 120%;
+                width: 100vw;
+            }
         }
         @media(min-height:900px){
             .tanks{
@@ -103,7 +136,7 @@
         }
         
         
-        @media(min-width:450px)and  (min-height:950px) {
+        @media(min-width:400px)and  (min-height:950px) {
             .tanks{
                 position: absolute;
                 top:100px;
@@ -517,11 +550,7 @@
                         height: 50px;
                         background-color: red;
                         z-index: 1;
-                        /* img{
-                            height: 100%;
-                            width: 100%
-
-                        } */
+                        
                     }
                 }
 
