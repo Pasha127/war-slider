@@ -290,6 +290,7 @@
                 width: 100%;
                 position: absolute;
                 top: -130px;
+                pointer-events: none;
                 
                 .number{
                     font-size: 53pt;
@@ -559,6 +560,7 @@
                 top: -272px;
                 right: -207px;
                 font-weight: 500;
+                pointer-events: none;
                 
                 .number{
                     font-size: 130pt;
