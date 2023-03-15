@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
 }
-
+/////////   ORANGE BUTTON   //////////
 @mixin orange-button($w: 291px, $h: 51px, $z: 0, $f: 12pt){
     $angle: 63%;
     //polygon(100% 0, 100% 63%, 95% 100%, 0 100%, 0 0
@@ -74,4 +74,57 @@ p{
     text-shadow: 0px 1px 2px black;
     font-size: $f;
 }
+}
+/////////   SLIDER ROW STYLE   //////////
+@mixin slider-row($opacity: 1, $top: 0px){
+    position: absolute;
+    top: $top;
+    width: 90%;
+    left:5%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    opacity: $opacity;
+    transition: opacity .5s, top .5s;
+
+    .flag-item{
+        &:hover .flag-subtitle{
+            top: -30px;
+            transition: top .3s;
+        }
+        
+        z-index: 1;
+        img{
+            position: relative;
+            width: 92px;
+            height: 72px;
+            bottom: 0px;
+            transition: width .3s, height .3s, bottom .3s;
+            &:hover{
+                cursor: pointer;
+                width: 120px;
+                height: 94px;
+                bottom: 20px;
+                transition: width .3s, height .3s, bottom .3s;
+                
+                
+            }
+            &:active{
+                cursor: pointer;
+                width: 110px;
+                height: 85px;
+                transition: width .3s, height .3s;
+            }
+        }
+        .flag-subtitle{
+            font-size: 9pt;
+        color: $secondary-text;
+        text-transform: uppercase;
+        position: relative;
+        top: 0px;
+        z-index: 1;
+            transition: top .3s;
+        
+    }
+    }
 }

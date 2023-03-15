@@ -25,18 +25,7 @@ let sliderSettings = {
         319: {
             slidesPerView: 3,
             spaceBetween: 10
-        },
-        // when window width is >= 640px
-        640: {
-      slidesPerView: 6,
-      spaceBetween: 40
-    },
-    // when window width is >= 1280px
-    1280: {
-        slidesPerView: 5,
-        
-        spaceBetween: 30,
-    }}
+        }}
 };
 
 
@@ -48,6 +37,7 @@ const FlagSlider = (props) => {
     const [rightArrow, setRightArrow] = useState(arrowBtn);
     const [leftArrow, setLeftArrow] = useState(arrowBtn);
     const [vw, setVw] = useState(window.innerWidth);
+    const [page, setPage] = useState(1);
     const {tankCategory} = props;
     const numberOfTanks = tankData[tankData.findIndex(country => country.name === selectedCountry)].number;
     const listOfTanks = tankData[tankData.findIndex(country =>country.name === selectedCountry)].tanks.join(", ");
@@ -79,6 +69,17 @@ const FlagSlider = (props) => {
         default: break;
     }
     
+
+    const turnPage = (page) => {
+        if (page === 1) {
+            setPage(2);
+        } else {
+            setPage(1);
+        }
+    }
+
+
+
     
     return(<div className="flag-slider">
         <div className="tanks-container">
@@ -107,7 +108,7 @@ const FlagSlider = (props) => {
                         {listOfTanks}
                     </div>
                 </div>
-            {vw < 1249 ? <Swiper {...sliderSettings}
+            {vw < 800 ? <Swiper {...sliderSettings}
             onSlideChange={(swiper) => {
                 setSelectedCountry(tankData[swiper.realIndex]?.name);
                 setActiveSlide(swiper.realIndex);}}
@@ -130,31 +131,40 @@ const FlagSlider = (props) => {
                     <img src={leftArrow} alt="arrow"
                     onMouseEnter={()=> setLeftArrow(arrowBtn2)}
                     onMouseLeave={()=> setLeftArrow(arrowBtn)}
-                    />
+                    onClick={()=> turnPage(page)}/>
                 </div>
-                <div className="first-row">
-                {tankData.slice(0,6).map((country,index)=>{
-                    <div key={"row 1 flag"+index} className="flag-item">
-                    </div>
+                <div className={`first-row-${page}`}>
+                {tankData.slice(1,6).map((country,index)=>{
+                   return (<div key={"row 1 flag"+index} className="flag-item"
+                    onClick={()=> setSelectedCountry(country.name)}
+                   >
+                        <img src={smallFlagURL+country.name+"_small.png"} alt="flag"/>
+                        <div className="flag-subtitle">{country.name}</div>
+                    </div>)
                 })}
                 </div>
-                {/* <div className="second-row">
+                <div className={`second-row-${page}`}>
                 {tankData.slice(7,11).map((country,index)=>{
-                    <div className="flag-item">
-                    <image src={smallFlagURL+country.name+".png"} alt="flag"/>
-                    </div>
+                   return (<div key={"row 2 flag"+index} className="flag-item"
+                   onClick={()=> setSelectedCountry(country.name)}
+                   >
+                    
+                     <img src={smallFlagURL+country.name+"_small.png"} alt="flag"/>
+                    <div className="flag-subtitle">{country.name}</div>
+                    </div>)
                 })}
-            </div> */}
+            </div>
                 <div className="right-sldr-btn">
                     <img src={rightArrow} alt="arrow"
                     onMouseEnter={()=> setRightArrow(arrowBtn2)}
-                    onMouseLeave={()=> setRightArrow(arrowBtn)}/>
+                    onMouseLeave={()=> setRightArrow(arrowBtn)}
+                    onClick={()=> turnPage(page)}/>
                 </div>
             </div>
             }
             </div>
         </div>
     </div>)
-}
 
+}
 export default FlagSlider;
