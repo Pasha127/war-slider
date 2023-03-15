@@ -666,7 +666,7 @@
                 }
 
                 .first-row-1{
-                   @include slider-row(1,0px);
+                   @include slider-row(1,0px); // slider style in mixins.scss
                 }
                 .first-row-2{
                     @include slider-row(0, 10px);
@@ -711,14 +711,4 @@
         }
     }
 
-}
-.slider-highlight-active{
-    position: absolute;
-    top: -50%;
-    height: 200px;
-    width: 200px;
-    background: none;
-    background: radial-gradient(circle, rgba(242,83,34,0.3034585674157303) 0%, rgba(255,255,255,0) 50%);
-    z-index: 5;
-    opacity: 1;
 }
