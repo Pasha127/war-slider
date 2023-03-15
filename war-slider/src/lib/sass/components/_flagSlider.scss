@@ -1,4 +1,54 @@
 @use "../abstracts" as *;
+//// ANIMATIONS ////
+@keyframes slide-in-from-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
+@keyframes roll-in {
+            0% {
+                opacity: 0;
+                transform: translateY(-2%);
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+                transform: translateY(0);
+            }
+            
+        }
+@keyframes fade-in-from-left {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        
+    }           
+@keyframes fade-in-from-bottom {
+        0% {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        
+    }           
+
 //// MOBILE //// ==================================================
 .flag-slider{
 
@@ -23,6 +73,7 @@
         margin-left: auto;
         width: 100%;
         z-index: 3;
+        animation: slide-in-from-right .8s ease-in-out;
         
         p{
             margin: 0;
@@ -40,6 +91,7 @@
             margin-left: auto;
             width: 100%;
             z-index: 1;
+            animation: slide-in-from-right .8s ease-in-out;
         }
     }
     .tanks-container{
@@ -66,6 +118,7 @@
                 margin-top: 90px;
                 width: 90%;
                 z-index: 1;
+                animation: roll-in .5s 0s 1 normal forwards;
             }
         }
         @media(min-width:400px){
@@ -174,6 +227,7 @@
                 position: relative;
                 object-fit: cover;
                 z-index: 1;
+                animation: fade-in-from-bottom .8s ease-in-out;
             }
             @media(min-width: 400px){
                 .large-flag{
@@ -186,15 +240,6 @@
             }
             @media(min-width: 525px){
                 .large-flag{
-                    width: 70vw;
-                    position: relative;
-                    object-fit: cover;
-                    z-index: 1;
-                }
-                
-            }
-            @media(min-width: 625px){
-                .large-flag{
                     width: 60vw;
                     position: relative;
                     object-fit: cover;
@@ -202,6 +247,7 @@
                 }
                 
             }
+            
             @media(min-width: 725px){
                 .large-flag{
                     width: 50vw;
@@ -431,7 +477,9 @@
             margin-left: auto;
             width: 100%;
             z-index: 0;
+            animation: slide-in-from-right .8s ease-in-out;
         }
+        
         
         
         .tanks-container{
@@ -458,7 +506,9 @@
                     margin-top: 90px;
                     width: 90%;
                     z-index: 1;
+                    animation: roll-in .5s 0s 1 normal forwards;
                 }
+                
             }
             
             .flag-container{
@@ -467,12 +517,15 @@
                 top: 10px;
                 left: 0;
                 @include center-flex;
+                
                 .large-flag{
                     width: 593px;
                     position: relative;
                     object-fit: cover;
                     z-index: 1;
-            }                     
+                    animation: fade-in-from-left .8s ease-in-out;
+            } 
+                     
         }      
     }
     .slider-bottom{        
@@ -664,8 +717,8 @@
     top: -50%;
     height: 200px;
     width: 200px;
-    background: red;
+    background: none;
     background: radial-gradient(circle, rgba(242,83,34,0.3034585674157303) 0%, rgba(255,255,255,0) 50%);
-    z-index: 0;
+    z-index: 5;
     opacity: 1;
 }

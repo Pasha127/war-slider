@@ -156,6 +156,11 @@
                 width: 306px;
                 color: $secondary-text;
             }
+            @media(max-width: 1613px){
+                .sub-tag-line{
+                   color: $primary-text;
+                }
+            }
             
         }
     }
