@@ -1,6 +1,7 @@
 @use "../abstracts" as *;
-
+//// MOBILE //// ==================================================
 .flag-slider{
+
     display: flex;
     justify-content: flex-start;
     height: 50vh;
@@ -8,7 +9,7 @@
     overflow: hidden;
     width: 100vw;
     
-
+    
     @media(min-height: 630px){
         .country-title{
         position: absolute;
@@ -22,7 +23,7 @@
         margin-left: auto;
         width: 100%;
         z-index: 3;
-
+        
         p{
             margin: 0;
         }
@@ -49,6 +50,7 @@
         width: 100vw;
         height: 100%;
         overflow: hidden;
+        
         .background{
             position: absolute;
             top: 0;
@@ -99,7 +101,7 @@
                 width: 100vw;
             }
         }
-                
+        
         
         @media(min-width:450px)and  (min-height:950px) {
             .tanks{
@@ -128,7 +130,7 @@
         
         
         
-
+        
         .flag-container{
             overflow: hidden;
             position: absolute;
@@ -177,9 +179,10 @@
                 
             }
             
-        
+            
         }
-
+        
+        
     }
     .slider-bottom{
         z-index: 3;
@@ -191,8 +194,8 @@
             height: 100%;
             width: 100vw;
             @include center-flex;
-           
-
+            
+            
         }
         .slider-section{
             @include center-flex;
@@ -214,7 +217,7 @@
                     font-weight: 900;
                     color: $primary-text;
                     margin-bottom: 0px;
-    
+                    
                 }
                 .number-subtitle{
                     color: $secondary-text;
@@ -227,7 +230,7 @@
                     .number{opacity: 0}
                     .number-subtitle{opacity: 0}
                 }
-
+                
                 
                 .tanks-list{
                     text-transform: uppercase;
@@ -248,40 +251,40 @@
                 height: 70px;
                 width: 91px;
                 cursor: pointer;
-               
-
+                
+                
                 .flag-img{
                     img{
-                    height: 50px;
-                    width: 65px;
-                    object-fit: contain;
-                    margin-top: 35px;
-                    transition: margin-top .3s;}
-                }
-            
-                .flag-img-active{
-                    @include center-flex;
-                    img{
-                    height:  100%;
-                    width: 91px;
-                    margin-top: 15px;
-                    transition: margin-top .3s;
-                    z-index: 1;
-                }
-                    .slider-highlight{
-                        content: "";
-                        position: absolute;
-                        top: -60%;
-                        height: 200px;
-                        width: 200px;
-                        background: red;
-                        background: radial-gradient(circle, rgba(242,83,34,0.3034585674157303) 0%, rgba(255,255,255,0) 50%);
-                        z-index: 0;
+                        height: 50px;
+                        width: 65px;
+                        object-fit: contain;
+                        margin-top: 35px;
+                        transition: margin-top .3s;}
                     }
-                }
-
-                .flag-subtitle{
-                    font-size: 9pt;
+                    
+                    .flag-img-active{
+                        @include center-flex;
+                        img{
+                            height:  100%;
+                            width: 91px;
+                            margin-top: 15px;
+                            transition: margin-top .3s;
+                            z-index: 1;
+                        }
+                        .slider-highlight{
+                            content: "";
+                            position: absolute;
+                            top: -60%;
+                            height: 200px;
+                            width: 200px;
+                            background: red;
+                            background: radial-gradient(circle, rgba(242,83,34,0.3034585674157303) 0%, rgba(255,255,255,0) 50%);
+                            z-index: 0;
+                        }
+                    }
+                    
+                    .flag-subtitle{
+                        font-size: 9pt;
                     color: $secondary-text;
                     text-transform: uppercase;
                     position: relative;
@@ -291,7 +294,279 @@
             }
         }
     }
+    
 }
 @media(max-height: 423px){
     .flag-slider{opacity: 0}
+}
+///// DESKTOP ///// ========================================================================================
+
+@media(min-width: 1250px) {
+    .flag-slider{
+        position: relative;
+        display: flex;
+        top: 0px;
+        left: 0px;
+        height: 100vh;
+        flex-direction: column;
+        overflow: hidden;
+        width: 100vw;  
+        .country-title{
+            position: absolute;
+            top: 135px;
+            right: -230px;
+            font-size: 130pt;
+            font-weight: 700;
+            color: #00000000;
+            margin-bottom: 10px;
+            -webkit-text-stroke: 2px $primary-text;
+            text-transform: uppercase;
+            margin-left: auto;
+            width: 100%;
+            z-index: 0;
+        }
+        
+        
+        .tanks-container{
+            @include center-flex;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 100vw;
+            height: 80vh;
+            
+            .background{
+                background-image: url($background-URL);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                position: absolute;
+                top: -90px;
+                right: 0px;
+                width: 1440px;
+                object-fit: contain;
+                @include center-flex;
+                .tanks{
+                    position: static;
+                    margin-top: 90px;
+                    width: 90%;
+                    z-index: 1;
+                }
+            }
+            
+            .flag-container{
+                overflow: hidden;
+                position: absolute;
+                top: 10px;
+                left: 0;
+                @include center-flex;
+                .large-flag{
+                    width: 593px;
+                    position: relative;
+                    object-fit: cover;
+                    z-index: 1;
+            }                     
+        }      
+    }
+    .slider-bottom{        
+        z-index: 3;
+        .bottom-gradient{
+            background: none;
+            background: linear-gradient(0deg, $background-color 50%, rgba(255,255,255,0) 100%);
+            position: absolute;
+            bottom: 0;
+            height: 30vh;
+            width: 100vw;
+            @include center-flex;
+            
+            
+        }
+        .slider-section{
+            @include center-flex;
+            width: 100vw;
+            height: 130px;
+            position: absolute;
+            bottom: 0px;
+            flex-direction: row;
+            
+
+
+            .stats{
+                @include center-flex;
+                height: 122px;
+                width: 100%;
+                position: absolute;
+                top: -272px;
+                right: -207px;
+                font-weight: 500;
+                
+                .number{
+                    font-size: 130pt;
+                    font-weight: 900;
+                    color: $primary-text;
+                    margin-bottom: 0px;
+                    
+                }
+                .number-subtitle{
+                    color: $secondary-text;
+                    text-transform: uppercase;
+                    font-size: 12pt;
+                    position: relative;
+                    top: -55px;
+                }
+                
+                .tanks-list{
+                    text-transform: uppercase;
+                    font-size: 25pt;
+                    position: relative;
+                    top: -40px; 
+                }
+            }
+            .swiper{
+                height: 100%;
+            }
+            /* .swiper-wrapper{
+                display: none;
+            } */
+            .slider-flag{
+                z-index: 2;
+                height: 70px;
+                width: 91px;
+                cursor: pointer;
+                
+                
+                .flag-img{
+                    img{
+                        height: 50px;
+                        width: 65px;
+                        object-fit: contain;
+                        margin-top: 35px;
+                        transition: margin-top .3s;}
+                    }
+                    
+                    .flag-img-active{
+                        @include center-flex;
+                        img{
+                            height:  100%;
+                            width: 91px;
+                            margin-top: 15px;
+                            transition: margin-top .3s;
+                            z-index: 1;
+                        }
+                        .slider-highlight{
+                            content: "";
+                            position: absolute;
+                            top: -60%;
+                            height: 200px;
+                            width: 200px;
+                            background: radial-gradient(circle, rgba(242,83,34,0.3034585674157303) 0%, rgba(255,255,255,0) 50%);
+                            z-index: 0;
+                        }
+                    }
+                    
+                    .flag-subtitle{
+                        font-size: 9pt;
+                        color: $secondary-text;
+                        text-transform: uppercase;
+                        position: relative;
+                        top: 0px;
+                        z-index: 1;
+                    }
+                }
+            }
+            .custom-slider{
+                position: absolute;
+                bottom: 0px;
+                width: 70%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                
+
+                .left-sldr-btn{
+                    margin-top: 35px;    
+
+                    img{
+                        scale: 1;
+                        transition: scale .3s;
+                        
+                        
+                        &:hover{
+                            scale: 1.3;
+                            transition: scale .3s;
+                            cursor: pointer;
+                        }
+                        &:active{
+                            scale: 1.2;
+                            transition: scale .3s;
+                            cursor: pointer;
+                        }
+                    }
+
+                }
+
+                .first-row{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    
+
+                    .flag-item{
+                        width: 65px;
+                        height: 50px;
+                        background-color: red;
+                        z-index: 1;
+                        /* img{
+                            height: 100%;
+                            width: 100%
+
+                        } */
+                    }
+                }
+
+                .second-row{
+                    @include center-flex;
+
+                    .flag-item{
+                        
+                        img{
+
+                         }   
+                    }
+                }
+
+
+
+
+                .right-sldr-btn{
+                    margin-top: 35px;    
+
+
+                    img{
+                        scale: 1;
+                        transition: scale .3s;
+
+                        -moz-transform: scale(-1, 1);
+                        -webkit-transform: scale(-1, 1);
+                        -o-transform: scale(-1, 1);
+                        -ms-transform: scale(-1, 1);
+                        transform: scale(-1, 1);
+                        
+                        &:hover{
+                            cursor: pointer;
+                            scale: 1.3;
+                            transition: scale .3s;
+                        }
+                        &:active{
+                            cursor: pointer;
+                            scale: 1.2;
+                            transition: scale .3s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }

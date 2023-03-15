@@ -9,4 +9,9 @@
         @include orange-button(200px,51px,1);
     }
 }
+@media (min-width: 1250px){
+    .registration-button{
+        @include orange-button(308px,61px,1);
+    }
+}
     

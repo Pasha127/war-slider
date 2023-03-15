@@ -1,6 +1,5 @@
 import React from "react";
 import RegisterBtn from "../buttons/RegisterBtn";
-import largeGermanFlag from "../../assets/SVGs/flags/germany_large_faded.svg"
 import FlagSlider from "./FlagSlider";
 
 
@@ -17,7 +16,7 @@ const CountrySelector = () => {
             <div className="slider-container">
                 <FlagSlider tankCategory={"heavy"}/>
             </div>
-            <div className="title-gradient"></div>
+            {/* <div className="title-gradient"></div> */}
             <div className="tank-type-header">{placeholderTankCategory}</div>
             <div className="call-to-action-container">
                 <div className="taglines">

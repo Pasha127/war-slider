@@ -1,5 +1,5 @@
 @use "../abstracts" as *;
-
+//// MOBILE ////
 .country-selector{
     @include center-flex;
     text-align: center;
@@ -7,7 +7,10 @@
     font-weight: 500;
     width: 100vw;
     overflow: hidden;
-
+    display: flex;
+    flex-direction: column;      
+    
+    
     .title-gradient{
         background: $background-color;
         background: linear-gradient(180deg, $background-color 80%, rgba(0,0,0,0) 100%);
@@ -16,23 +19,7 @@
         width: 100vw;
         height: 50vh;
     }
-
-
-    .large-flag-container{
-        overflow: hidden;
-        position: absolute;
-        @include center-flex;
-        top: 280px;
-
-        .large-flag{
-            width: 100vw;
-            position: relative;
-            object-fit: cover;
-
-        }
-
-    }
-
+    
     .tank-type-header{
         font-size: 28pt;
         line-height: 2.5rem;
@@ -59,7 +46,7 @@
         z-index: 2;
         @include center-flex;
         text-transform: uppercase;
-
+        
         .taglines{
             @include center-flex;
             margin-bottom: 20px;
@@ -94,7 +81,7 @@
             }
         }
     }
-
+    
     .slider-container{
         @include center-flex;
         position: absolute;
@@ -102,5 +89,84 @@
         bottom: 0px;
         height: 49vh;
     }
+}
 
+//// DESKTOP ////==========================================================================================
+
+
+@media (min-width: 1250px) {
+    
+    .country-selector{
+        @include center-flex;
+        text-align: center;
+        color: $primary-text;
+        font-weight: 500;
+        width: 100vw;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row-reverse;      
+        
+        
+        .title-gradient{
+            background: $background-color;
+            background: linear-gradient(180deg, $background-color 80%, rgba(0,0,0,0) 100%);
+            position: absolute;
+            top: 0;
+            width: 100vw;
+            height: 50vh;
+        }
+        
+        .tank-type-header{
+            font-size: 60pt;
+            font-weight: 700;
+            line-height: 2.5rem;
+            width: 100%;
+            margin-block: 20px;
+            z-index: 2;
+            position: absolute;
+            top: 61px;
+    }
+   
+    
+    .call-to-action-container{
+        position: absolute;
+        z-index: 2;
+        top: 30vh;
+        left: 100px;
+        display: flex;
+        align-items: baseline;
+        text-transform: uppercase;
+        text-align: left;
+        
+        .taglines{
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 80px;
+            
+            .tag-line{
+                font-size: 30pt;
+                line-height: 1.1;
+                width: 550px;
+                margin-bottom: 30px;
+            }
+            
+            
+            .sub-tag-line{
+                font-size: 12pt;
+                width: 306px;
+                color: $secondary-text;
+            }
+            
+        }
+    }
+    
+    .slider-container{
+        @include center-flex;
+        bottom: 0px;
+        position: relative;
+        width: 50%;
+        height: 100%;
+    }    
+    
+}
 }
