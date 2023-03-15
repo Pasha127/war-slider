@@ -88,31 +88,6 @@ p{
     transition: opacity .5s, top .5s;
 
     .flag-item{
-        slider-flag-container{
-            
-
-            .slider-highlight-active{
-                position: absolute;
-                top: -50%;
-                
-                height: 200px;
-                width: 200px;
-                background: none;
-                background: radial-gradient(circle, rgba(242,83,34,0.3034585674157303) 0%, rgba(255,255,255,0) 50%);
-                z-index: 0;
-                opacity: 1;
-            }
-            &::after{
-                position: absolute;
-                top: 0%;
-                height: 200px;
-                width: 200px;
-                background: none;
-                background: radial-gradient(circle, rgba(242,83,34,0.3034585674157303) 0%, rgba(255,255,255,0) 50%);
-                z-index: 5;
-                opacity: 1;
-            }
-            
         &:hover .flag-subtitle{
             top: -30px;
             transition: top .3s;
@@ -143,15 +118,16 @@ p{
         }
         .flag-subtitle{
             font-size: 9pt;
-            color: $secondary-text;
-            text-transform: uppercase;
-            position: relative;
-            top: 0px;
-            z-index: 1;
+        color: $secondary-text;
+        text-transform: uppercase;
+        position: relative;
+        top: 0px;
+        z-index: 1;
             transition: top .3s;
             
             
-        }
+
+        
     }
     }
 }
